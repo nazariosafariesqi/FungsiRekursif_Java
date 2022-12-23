@@ -10,11 +10,12 @@ public class HitungPangkat {
     }
 
     public static void main(String[] args) {
-        Scanner Nazario = new Scanner(System.in);
-        System.out.println("Bilangan yang dihitung : ");
-        int bilangan = Nazario.nextInt();
-        System.out.println("Pangkat : ");
-        int pangkat = Nazario.nextInt();
-        System.out.println(hitungPangkat(bilangan, pangkat));
+        try (Scanner Nazario = new Scanner(System.in)) {
+            System.out.println("Bilangan yang dihitung : ");
+            int bilangan = Nazario.nextInt();
+            System.out.println("Pangkat : ");
+            int pangkat = Nazario.nextInt();
+            System.out.println(hitungPangkat(bilangan, pangkat));
+        }
     }
 }

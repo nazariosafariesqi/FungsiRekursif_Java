@@ -10,13 +10,14 @@ public class HitungBunga {
     }
 
     public static void main(String[] args) {
-        Scanner Nazario = new Scanner(System.in);
-        System.out.println("Jumlah Saldo Awal : ");
-        double saldoAwal = Nazario.nextInt();
-        System.out.println("Lamanya menabung (Tahun) : ");
-        int tahun = Nazario.nextInt();
+        try (Scanner Nazario = new Scanner(System.in)) {
+            System.out.println("Jumlah Saldo Awal : ");
+            double saldoAwal = Nazario.nextInt();
+            System.out.println("Lamanya menabung (Tahun) : ");
+            int tahun = Nazario.nextInt();
 
-        System.out.print("Jumlah uang setelah " + tahun + " tahun : ");
-        System.out.println(hitungBunga(saldoAwal, tahun));
+            System.out.print("Jumlah uang setelah " + tahun + " tahun : ");
+            System.out.println(hitungBunga(saldoAwal, tahun));
+        }
     }
 }
